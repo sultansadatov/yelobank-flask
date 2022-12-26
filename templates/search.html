@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% block styles %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/search.css') }}">
+{% endblock %}
+{% block title %}
+Search
+{% endblock %}
+
+{% block content %}
+
+<section class="search">
+    <div class="main-container">
+        <h2 class="search-title">
+            Axtarış
+        </h2>
+        {% if searches %}
+            <ul class="search-list">
+                {% for search in searches%}
+                    <li class="search-item">
+                        <a href="/news/{{search.id}}" class="search-link">
+                            {{search.title}}
+                        </a>
+                    </li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p class="search-text">
+                Heç bir nəticə tapılmadı
+            </p>
+    
+            <a href="#" class="search-btn header-modal__close">
+                Yenidən axtar
+            </a>
+        {% endif %}
+    </div>
+</section>
+
+{% endblock %}

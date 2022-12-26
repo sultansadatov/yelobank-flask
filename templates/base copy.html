@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Icons -->
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://www.yelo.az/site/templates/images/fav/favicon-96x96.png"
+      sizes="96x96"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://www.yelo.az/site/templates/images/fav/favicon-32x32.png"
+      sizes="32x32"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://www.yelo.az/site/templates/images/fav/favicon-16x16.png"
+      sizes="16x16"
+    />
+
+    <!-- Jquery cdn -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Slick slider -->
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='slick/slick-theme.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='slick/slick.css') }}"
+    />
+
+    <!-- Fontawesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+
+    <!-- Bootstrap CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+
+    <!-- Bootstrap JavaScript Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+      crossorigin="anonymous"
+    ></script>
+
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='/styles/reset.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='/styles/global.css') }}"
+    />
+
+    {% block styles %} {% endblock %}
+
+    <title>{% block title %} {% endblock title %}</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-top">
+        <div class="main-container">
+          <div class="header__inner">
+            <div class="header-top__left">
+              <ul class="header-top__lists d-flex">
+                <li class="header-top__item header-top__links">
+                  <a
+                    href="/"
+                    class="header-top__link {% if active == 'home' %}active{% endif %}"
+                  >
+                    Fərdi
+                  </a>
+                </li>
+
+                <li class="header-top__item header-top__links">
+                  <a href="/" class="header-top__link"> Biznes </a>
+                </li>
+
+                <li class="header-top__item header-top__links">
+                  <a href="/" class="header-top__link"> Bank haqqında </a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="header-top__right">
+              <ul class="header-top__lists d-flex">
+                <li class="header-top__item">
+                  <a href="/" class="header-top__link">
+                    <i class="fa-solid fa-location-dot"></i> ATM və Filiallar
+                  </a>
+                </li>
+
+                <li class="header-top__item">
+                  <a href="/" class="header-top__link">
+                    <i class="fa-solid fa-user-group"></i> Onlayn növbə
+                  </a>
+                </li>
+
+                <li class="header-top__item">
+                  <a href="tel:981" class="header-top__link">
+                    <i class="fa-solid fa-phone"></i> 981
+                  </a>
+                </li>
+
+                <li class="header-top__item">
+                  <button
+                    class="header-top__link header-modal__close"
+                    type="button"
+                    data-bs-toggle="header-modal"
+                    data-bs-target="#search"
+                  >
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                  </button>
+
+                  <div
+                    class="header-modal"
+                    id="search"
+                  >
+                    <div class="modal__inner">
+                      <form class="header-modal__content main-container" action="" method="post">
+                        <div class="header-modal__body d-flex justify-content-between">
+                          <div class="header-modal__inputs">
+                            <input
+                              type="text"
+                              class="modal-input"
+                              placeholder="Axtarış"
+                            />
+                          </div>
+                          <div class="header-modal__btns">
+                            <button type="submit" class="modal-btn">
+                              <i class="fa-solid fa-magnifying-glass"></i>
+                            </button>
+                            <button
+                              type="button"
+                              class="header-modal__close"
+                            >
+                              <i class="fa-solid fa-xmark"></i>
+                            </button>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </li>
+
+                <li class="header-top__item">
+                  <select name="lang" id="lang" class="lang">
+                    <option value="az">AZ</option>
+
+                    <option value="en">EN</option>
+
+                    <option value="ru">RU</option>
+                  </select>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="main-container">
+        <div class="header-bottom">
+          <div class="header__inner">
+            <div class="logo">
+              <a href="/" class="header-bottom__link">
+                <img
+                  src="{{ url_for('static', filename='images/icons/headerlogo.svg') }}"
+                  alt=""
+                  class="header-logo__img"
+                />
+              </a>
+            </div>
+            {% if nav %}
+
+            <nav class="nav">
+              <ul class="header-bottom__lists d-flex align-items-center">
+                <li class="header-bottom__item">
+                  <a href="/" class="header-bottom__item"> Kreditlər </a>
+                </li>
+
+                <li class="header-bottom__item">
+                  <a href="/" class="header-bottom__item"> Kartlar </a>
+                </li>
+
+                <li class="header-bottom__item">
+                  <a href="/" class="header-bottom__item"> Əmanətlər </a>
+                </li>
+
+                <li class="header-bottom__item">
+                  <a href="/" class="header-bottom__item"> Pul köçürmələri </a>
+                </li>
+              </ul>
+            </nav>
+
+            {% endif %}
+
+            <div class="header-bottom__btns d-flex">
+              <a class="login_btn" href="/login">
+                <!-- <i class="fa-solid fa-arrow-right-from-bracket"></i>  -->
+                <span>İnternet bank</span>
+              </a>
+
+              {% if nav %}
+              <div class="hamburger-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hamburger-menu">
+        <div class="main-container d-flex justify-content-between">
+          <div class="hamburger-menu__left">
+            <div class="exp_nav">
+              <div class="exp_nav_item">
+                <a href="/az/individuals/loans/" class="m_nav">Kreditlər</a>
+                <ul>
+                  <li>
+                    <a href="/az/individuals/loans/consumer-loan/"
+                      >İstehlak krediti</a
+                    >
+                  </li>
+                  <li>
+                    <a href="/az/individuals/loans/consumer-loan-1/"
+                      >Daşınmaz əmlak girov krediti</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="/az/individuals/loans/loans-with-savings-collateral/"
+                      >Əmanət təminatlı kredit</a
+                    >
+                  </li>
+                  <li>
+                    <a href="/az/individuals/loans/ipoteka-krediti/"
+                      >İpoteka krediti</a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <div class="exp_nav_item">
+                <a href="/az/individuals/cards/" class="m_nav">Kartlar</a>
+                <ul>
+                  <li>
+                    <a href="/az/individuals/cards/yelo-kart-debet/"
+                      >Yelo Light</a
+                    >
+                  </li>
+                  <li>
+                    <a href="/az/individuals/cards/yelo-kart-platinum/"
+                      >Yelo Premium</a
+                    >
+                  </li>
+                  <li>
+                    <a href="/az/individuals/cards/yelo-loan-card/"
+                      >Yelo Kredit kartı</a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <div class="exp_nav_item">
+                <a href="/az/individuals/deposits/" class="m_nav">Əmanətlər</a>
+                <ul>
+                  <li>
+                    <a href="/az/individuals/deposits/yelo-sabit/"
+                      >Yelo Sabit</a
+                    >
+                  </li>
+                  <li>
+                    <a href="/az/individuals/deposits/zefer-emanet/"
+                      >"Parlaq Zəfər" əmanəti</a
+                    >
+                  </li>
+                  <li>
+                    <a href="/az/individuals/deposits/yelo-yigim/"
+                      >Yelo Yığım</a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <div class="exp_nav_item">
+                <a href="/az/individuals/card-services/" class="m_nav"
+                  >Kart xidmətləri</a
+                >
+                <ul>
+                  <li>
+                    <a
+                      href="/az/individuals/card-services/onlayn-pin-set/"
+                      data-service-id="6210"
+                      data-modal="card_pop_up"
+                      >Onlayn PIN SET</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="/az/individuals/card-services/cashback/"
+                      data-service-id="1163"
+                      data-modal="card_pop_up"
+                      >Cashback</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="/az/individuals/card-services/pin-reset/"
+                      data-service-id="1104"
+                      data-modal="card_pop_up"
+                      >PIN Reset</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="/az/individuals/card-services/change-pin-code/"
+                      data-service-id="1105"
+                      data-modal="card_pop_up"
+                      >PIN kodun dəyişdirilməsi</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="/az/individuals/card-services/sms-notifications/"
+                      data-service-id="1106"
+                      data-modal="card_pop_up"
+                      >SMS məlumatlandırma</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="/az/individuals/card-services/3d-secure/"
+                      data-service-id="1107"
+                      data-modal="card_pop_up"
+                      >3D secure</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="/az/individuals/card-services/cash-by-code/"
+                      data-service-id="1108"
+                      data-modal="card_pop_up"
+                      >Cash by code</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="/az/individuals/card-services/card-to-card/"
+                      data-service-id="1109"
+                      data-modal="card_pop_up"
+                      >Card to card</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="/az/individuals/card-services/atm-pin-set/"
+                      data-service-id="6706"
+                      data-modal="card_pop_up"
+                      >ATM PIN SET</a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <div
+                class="exp_nav_item d-flex flex-column justify-content-between"
+              >
+                <div class="exp_nav_div">
+                  <a href="/az/individuals/money-transfers/" class="m_nav"
+                    >Pul köçürmələri</a
+                  >
+                  <ul>
+                    <li>
+                      <a href="/az/individuals/money-transfers/"
+                        >Western Union</a
+                      >
+                    </li>
+                    <li>
+                      <a href="/az/individuals/money-transfers/"
+                        >Zolotaya Korona</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <div class="exp_nav_div">
+                  <a href="/az/individuals/other-services/" class="m_nav"
+                    >Digər xidmətlər</a
+                  >
+                  <ul>
+                    <li>
+                      <a
+                        href="/az/individuals/other-services/settlement-and-cash-service/"
+                        >Hesablaşma-kassa xidməti</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div
+                class="exp_nav_item d-flex flex-column justify-content-between"
+              >
+                <div class="exp_nav_div">
+                  <a href="/az/individuals/online-services/" class="m_nav"
+                    >Onlayn xidmətlər</a
+                  >
+                  <ul>
+                    <li>
+                      <a href="/az/individuals/online-services/loan_request/"
+                        >Online kredit sifarişi</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.yelo.az/az/individuals/online-services/loan_request/?loan_token=8d13fa3408259deb133aeb4575f47b4b&amp;utm_source=page_online_payment_circle311&amp;utm_medium=page_online_payment_circle312&amp;utm_campaign=page_online_payment_circle313"
+                        >Onlayn ödəmə</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="/az/individuals/online-services/online-loan-payment/"
+                        >Online kredit ödənişi</a
+                      >
+                    </li>
+                    <li>
+                      <a href="/az/individuals/online-services/online-queue/"
+                        >Onlayn növbə</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="exp_nav_div">
+                  <a href="/az/individuals/cashback/" class="m_nav">Cashback</a>
+                  <ul></ul>
+                </div>
+              </div>
+
+              <div class="exp_nav_item">
+                <a href="/az/individuals/faq/" class="m_nav">Forum</a>
+                <ul></ul>
+              </div>
+              <div class="exp_nav_item">
+                <a href="/az/individuals/kredit-kalkulyatoru/" class="m_nav"
+                  >Kredit kalkulyatoru</a
+                >
+                <ul></ul>
+              </div>
+              <div class="exp_nav_item">
+                <a href="/az/individuals/feedback/" class="m_nav"
+                  >Təklif və iradlar</a
+                >
+                <ul></ul>
+              </div>
+            </div>
+
+            <div class="hamburger-contact__info">
+              <div class="ci_item">
+                <p>Bizi tap</p>
+                <b>Həsən bəy Zərdabi 81K, Bakı AZ 1122, Azərbaycan</b>
+              </div>
+              <div class="ci_item">
+                <p>Əlaqə nömrəsi</p>
+                <b>981</b>
+              </div>
+              <div class="ci_item">
+                <p>Bizə yazın</p>
+                <b
+                  ><a href="mailto:bank@yelo.az" target="_blank"
+                    >bank@yelo.az</a
+                  ></b
+                >
+              </div>
+            </div>
+          </div>
+
+          <a href="/" class="hamburger-menu__right"> </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Contents -->
+    {% block content %} {% endblock content %}
+
+    <!-- Slick js -->
+    <script src="{{ url_for('static', filename='slick/slick.js') }}"></script>
+    <script src="{{ url_for('static', filename='slick/slick.min.js') }}"></script>
+
+    <!-- Header js -->
+    <script src="{{ url_for('static',filename='js/header.js') }}"></script>
+
+    <!-- Burger js -->
+    <script src="{{ url_for('static', filename='js/burger.js') }}"></script>
+
+    <!-- Scripts -->
+    {% block scripts %} {% endblock %}
+  <footer class="py-5" style="border-top: 1px solid #ECECEC;">
+    <div class="container text-center text-md-start mt-5">
+          <section class="section">
+          <div class="row mx-auto">
+            <div class="col-3">
+              <h4><a href="/az/individuals/">Fərdi</a></h4>
+              <br><br>
+              <ul class="nav flex-column" style="font-size: 14px;">
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Kreditlər</a></li>
+                <br>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Kartlar</a></li>
+                <br>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Əmanətlər</a></li>
+                <br>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pul köçürmələri</a></li>
+                <br>
+              </ul>
+            </div>
+      
+            <div class="col-3">
+             <h4><a href="/az/business/">Biznes</a></h4>
+              <br><br>
+              <ul class="nav flex-column" style="font-size: 14px;">
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Kreditlər</a></li>
+                <br>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Kartlar</a></li>
+                <br>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Biznes xidmətlər</a></li>
+                <br>
+              </ul>
+            </div>
+      
+            <div class="col-3">
+              <h4><a href="/az/about-bank/">Bank haqqında</a></h4>
+              <br><br>
+              <ul class="nav flex-column" style="font-size: 14px;">
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Rəhbərlik</a></li>
+                <br>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Karyera</a></li>
+                <br>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Hesabatlar</a></li>
+                <br>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Komitələr</a></li>
+                <br>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Sənədlər</a></li>
+                <br>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Xəbərlər</a></li>
+                <br>
+              </ul>
+            </div>
+            <div class="col-3">
+                <h4><a href="/az/individuals/online-services/">Onlayn xidmətlər</a></h4>
+                <br><br>
+                <ul class="nav flex-column" style="font-size: 14px;">
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Onlayn kredit sifarişi</a></li>
+                  <br>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Kart sifarişi</a></li>
+                  <br>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Onlayn növbə</a></li>
+                  <br>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Onlayn kredit ödənişi</a></li>
+                  <br>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Onlayn ödəmə</a></li>
+                  <br>
+                </ul>
+              </div>
+          </div>
+          <br><br><section class="d-flex  justify-content-lg-between" style="border-bottom: 1px solid #ECECEC;">
+            <div>
+            <a href="https://www.facebook.com/yelo.az" class="me-4 text-reset" style="text-decoration:none;">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.instagram.com/accounts/login/?next=/yelobank/" class="me-4 text-reset" style="text-decoration:none;">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.linkedin.com/company/yelo-bank/" class="me-4 text-reset" style="text-decoration:none;">
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://www.youtube.com/channel/UCz7siujqcwxQz3OcWqK5NLQ" class="me-4 text-reset" style="text-decoration:none;">
+                <i class="fab fa-youtube"></i>
+            </a>
+            <a href="https://twitter.com/yelo_bank" class="me-4 text-reset" style="text-decoration:none;">
+                <i class="fab fa-twitter"></i>
+            </a>
+            </div>
+            <div class="me-5" style="width:550px">
+                <div class="d-flex justify-content-lg-between">
+                    <div class="mx-auto" style="font-size: 14px;">
+                        <p>Bizi tap</p>
+                        <b><small>Həsən bəy Zərdabi 81K, Bakı AZ 1122, Azərbaycan</small></b>
+                    </div>
+                    <div class="mx-auto" style="font-size: 14px;">
+                        <p>Əlaqə nömrəsi</p>
+                        <b><small>981</small> </b>
+                    </div>
+                    <div class="mx-auto" style="font-size: 14px;">
+                        <p>Bizə yazın</p>
+                        <b><small>bank@yelo.az</small></b>
+                    </div>
+                </div>
+                <br>
+            </div>
+        </section>
+</section>
+
+
+      </div>
+      <br>
+      <div class="end">
+        <img src="{{ url_for('static', filename='images/icons/headerlogo.svg') }}"><br>
+        <br><br>
+        <ul class="ul">
+        <li>
+        © 2022 Yelo Bank
+        </li>
+        <li><a href="https://www.e-gov.az" target="_blank" >E-portal</a></li>
+        <li><a href="https://www.adif.az/" target="_blank">ADİF</a></li>
+        <li><a href="https://infobank.az/" target="_blank">infobank.az</a></li>
+        <li><a href="https://qdf.gov.az/iane-et/" target="_blank">Qarabağ Dirçəliş Fondu</a></li>
+        <li><a href="https://gpp.az/WebPortal/Infosite/Sc/989000/Category/8" target="_blank">YAŞAT Fondu</a></li> 
+      </ul>
+        </div>
+        </footer>
+      </div>
+
+      <div class="info-btn">
+        <button class="info-btn__link">
+          <div class="info-btn__outer">
+            <i class="fa-solid fa-message"></i>
+          </div>
+
+          <div class="info-btn__inner">
+            <i class="fa-solid fa-message"></i>
+          </div>
+        </button>
+      </div>
+</body>
+
+
+</html>

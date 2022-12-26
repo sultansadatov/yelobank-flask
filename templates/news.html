@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+{% block styles %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/news.css') }}">
+{% endblock %}
+{% block title %}
+    Xəbərlər | Yelo Bank
+{% endblock %}
+{% block content %}
+
+<section class="news">
+    <div class="main-container">
+        <h2 class="news-title">
+            Xəbərlər
+        </h2>
+        
+        <div class="news__inner">
+            {% for new in news %}
+            <div class="news-item">
+                <a href="/" class="news-link"></a>
+                <div class="news-text fw-bold ">
+                    {{new.title}}
+                </div>
+            
+                <div class="d-flex justify-content-between">
+                    <div class="w-100 news-details__link d-flex justify-content-between">
+                        <a href="/news/{{new.id}}" class="text-decoration-none">
+                            Daha ətraflı <i class="fa-solid fa-arrow-right-long"></i>
+                        </a>
+                        <input type="hidden" value="{{loop.counter}}">
+                        <div class="news-time">
+                            {{new.created_at.strftime('%-d %B %Y')}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+
+
+        <form action="" method="post">
+            <input type="hidden" name="count-news" id="countNews" value="{{count_news}}">
+            <button class="news-btn" type="submit">
+                Daha çox
+            </button>
+        </form>
+    </div>
+</section>
+
+<script>
+    let countNews = document.querySelector("#count-news");
+    document.querySelector(".news-btn").addEventListener('click', function getData(){
+        countNews.value += 9;
+
+        console.log("kerim")
+    })
+</script>
+
+{% endblock %}

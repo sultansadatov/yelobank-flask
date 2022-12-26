@@ -1,0 +1,245 @@
+* {
+    list-style-type: none;
+}
+
+.first_text {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 20px;
+    padding-bottom: 70px;
+    padding-top: 40px;
+}
+
+.card_list {
+    padding: 0 0 40px 0;
+}
+
+.yelo_bg {
+    background: url(../images/yelo_block.svg) no-repeat 117%;
+    background-size: contain;
+}
+
+.common_item {
+    border: 1px solid #ECECEC;
+    border-radius: 10px;
+    width: 100%;
+    position: relative;
+    margin: 0 0 45px 0;
+    height: 376px;
+}
+
+.inner_text {
+    padding: 45px 40px 45px 60px;
+    box-sizing: border-box;
+    width: 600px
+}
+
+.card_name {
+    padding: 0 0 10px;
+    font-size: 34px;
+    line-height: 40px;
+}
+
+.card_paragraph {
+    font-size: 18px;
+    line-height: 20px;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.card_column {
+    padding: 40px 0 50px 0;
+    display: flex;
+}
+
+.card_inner {
+    margin: 0 40px 0 0;
+}
+
+.card_inner p {
+    color: rgba(0, 0, 0, 0.5);
+    line-height: 16px;
+    margin: 0 0 5px 0;
+}
+
+
+.card_inner b {
+    font-size: 21px;
+    font-family: 'm';
+    line-height: 26px;
+}
+
+.inner_text ul {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.inner_text .button {
+    width: 225px;
+    margin: 0 20px 0 0;
+}
+
+.button {
+    position: relative;
+    width: 225px;
+    margin: 0 20px 0 0;
+    text-decoration: none;
+    color: #FFF;
+    height: 60px;
+    font-size: 20px;
+    box-sizing: border-box;
+    display: inline-block;  
+    padding: 15px 20px;
+    position: relative;
+    text-align: center;
+    transition: all 0.2s cubic-bezier(.52, .01, .16, 1);
+}
+
+.button:hover span{
+    color: #000;
+}
+
+.button:hover::after{
+    background: #FFC628;
+}
+
+.button span{
+    position: relative;
+    z-index: 3;
+}
+
+.button::after {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    transform: skew(-14deg, 0);
+    background: black;
+    display: block;
+    content: '';
+    transition: all 0.2s cubic-bezier(.52, .01, .16, 1);
+}
+.button2{
+    text-decoration: none;
+font-size: large;
+color: rgb(35, 34, 34);}
+
+
+.button2:hover{color:rgb(21, 21, 21)}
+.inner_text .button2 {
+    opacity: 0.5;
+    transition: all 0.2s ease-out;
+}
+
+#more_info{margin-top: 20px;
+font-weight: bold;}
+.imgs {
+  width: 40%;
+  height: 110%;
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom center;}i
+
+
+.image {
+    background-image: url('../images/55.png');
+    position: absolute;
+    width: 104%;
+    height: 104%;
+    top: -2%;
+    left: -2%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: transparent;
+    background-size: cover;
+    transition: all 0.1s ease-out;
+}
+
+.atvImg-shine {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 15px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, .25) 0%, rgba(255, 255, 255, 0) 60%);
+}
+
+
+
+.stories {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  .stories-title {
+    margin-bottom: 15px;
+  }
+  
+  .section-title span {
+    width: 32px;
+    height: 32px;
+    background: #FFC628;
+    color: white;
+    border-radius: 100%;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    font-family: “b”;
+    font-size: 18px;
+    line-height: 34px;
+    margin: 0 0 0 8px;
+  }
+  .stories-item__img {
+    width: 140px;
+    height: 140px;
+  }
+  .stories-item__img img {
+    width: 100%;
+    height: 100%;
+  }
+  .stories-item__info {
+    max-width: 180px;
+    margin: 30px 0 0 30px;
+  }
+  .stories-item__title {
+    background-color: #fff;
+    font-size: 13px;
+    height: 24px;
+    line-height: 22px;
+    border-radius: 20px;
+    display: inline-block;
+    padding: 1px 12px;
+    margin-bottom: 5px;
+  }
+  .stories-item:nth-child(1) .stories-item__title {
+    color: #0071C7;
+  }
+  .stories-item:nth-child(2) .stories-item__title {
+    color: #D82A34;
+  }
+  .stories-item:nth-child(3) .stories-item__title {
+    color: #81BD5B;
+  }
+  .stories-item {
+    height: 140px;
+    border-radius: 10px;
+    overflow: hidden;
+    display: block;
+    position: relative;
+    color: #fff;
+  }
+  .stories-item:nth-child(1) {
+    background-color: #0071C7;
+  }
+  .stories-item:nth-child(2) {
+    background-color: #D82A34;
+  }
+  .stories-item:nth-child(3) {
+    background-color: #81BD5B;
+  }
+
+  #more {display: none;}

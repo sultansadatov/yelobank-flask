@@ -1,0 +1,707 @@
+{% extends 'base.html' %}
+{% block styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='styles/cards-info.css') }}">
+{% endblock %}
+
+
+{% block title %}
+cards
+{% endblock %}
+
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='slick/slick.js') }}"></script>
+{% endblock %}
+
+
+
+{% block content %}
+
+<div class="p-3 mb-2 " style="height:370px;background-color: #edba2c">
+    <div class="main-container">
+        <div class="d-flex justify-content-between">
+            <div class="yelo">
+                <h1 class="h1">Yelo Light</h1>
+                <a href="/az/individuals/cards/yelo-kart-debet/#order_form" class="button">
+                    <span>
+                        Sifariş et
+                    </span>
+                </a>
+            </div>
+            <div class="yelo-img">
+                <img src="../static/images/55.png" style="width:200px;height:330px;">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="content">
+
+
+    <div class="pages filter_list">
+        <ul>
+            <li><a href="javascript:void(0)" data-block-source="block-1" id="block" onclick="showDiv1()">Kart
+                    haqqında</a></li>
+            <li><a href="javascript:void(0)" data-block-source="block-2" id="block" onclick="showDiv2()">Sənədlər</a>
+            </li>
+            <li><a href="javascript:void(0)" data-block-source="block-3" id="block" onclick="showDiv3()">Sual -
+                    cavab</a></li>
+        </ul>
+    </div>
+
+    <div class="container" style="text-align:center;">
+
+        <!-- BLOCK1 -->
+        <div class="blocks" id="block-1">
+            <div class="about_card">
+                <div>
+                    <p class="block_p">Çoxfunksiyalı Yelo kart ilə yalnız qalıq məbləğə faiz gəliri deyil, həm də hər
+                        ödənişindən cashback qazanacaq və digər üstünlüklərindən faydalanacaqsan</p>
+                </div><br><br>
+                <ul style="text-align:left;">
+                    <li>
+                        <div class="cd_i"
+                            style="background-image:url(../static/images/currency.svg); background-color:#0091FE;">
+                        </div>
+                        <div class="cd_i_desc cd_i_desc_card">
+                            <p>Valyuta: AZN / USD / EUR</p>
+                            <b></b>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cd_i"
+                            style="background-image:url(../static/images/calendar-2.svg); background-color:#947EEC;">
+                        </div>
+                        <div class="cd_i_desc cd_i_desc_card">
+                            <p>Müddət: 1 il / 3 il</p>
+                            <b></b>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cd_i"
+                            style="background-image:url(../static/images/percent.svg); background-color:#FF3A33;">
+                        </div>
+                        <div class="cd_i_desc cd_i_desc_card">
+                            <p>Balansdakı qalığa gəlir illik 5% (AZN) / 0.1% (USD)</p>
+                            <b></b>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cd_i"
+                            style="background-image:url(../static/images/cashback.svg); background-color:#0FDB9D;">
+                        </div>
+                        <div class="cd_i_desc cd_i_desc_card">
+                            <p>Partnyorlarda 30%-dək cashback</p>
+                            <b></b>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cd_i"
+                            style="background-image:url(../static/images/126.svg); background-color:#75842F;">
+                        </div>
+                        <div class="cd_i_desc cd_i_desc_card">
+                            <p>Ölkədaxili hər yerdə 0.5% cashback</p>
+                            <b></b>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cd_i"
+                            style="background-image:url(../static/images/atm_cash.svg); background-color:#2174C3;">
+                        </div>
+                        <div class="cd_i_desc cd_i_desc_card">
+                            <p>Yelo Bank ATM-lərindən pulun komissiyasız çıxarılması</p>
+                            <b></b>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cd_i"
+                            style="background-image:url(../static/images/125.svg); background-color:#F799B9;">
+                        </div>
+                        <div class="cd_i_desc cd_i_desc_card">
+                            <p>Qiymət: 1 illik - 10 AZN / 3 illik - 15 AZN (pulsuz almaq imkanı)</p>
+                            <b></b>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <br><br><br>
+            <div style="width:800px;margin: 0 auto;">
+                <p style="font-size:23px"> Pulsuz 3 illik kartı 100 AZN / 50 USD / 50 EUR ilkin mədaxil etməklə əldə edə
+                    bilərsən!*</p><br><br>
+                <p style="text-align: left;font-size:17px;color: rgb(122, 122, 122);">Kartın yalnız şaquli formasına
+                    görə deyil, həm də kənarının rənginə görə pul qabında digər kartlardan fərqlənəcək.
+                    Tezliklə bu kartı daha çox sevəcəksən. Debet kart ilə dünyanın istənilən ölkəsində rahat alış-veriş,
+                    onlayn ödənişlər edə,
+                    restoran, bilet və digər xidmətlərdən istifadə edə və ya vəsaiti rahat nağdlaşdıra bilərsiniz.
+                    Həmçinin debet kart
+                    şifrəsini online pin set xidmətindən yararlanaraq təyin edə bilərsiniz. Bu və daha çox
+                    üstünlüklərdən yararlanmaq üçün
+                    aşağıdakı sifariş formasından istifadə edərək debet kart sifarişi edə bilərsiniz.
+                    <br><br>
+                    *Hal-hazırda ilkin mədaxil etməklə pulsuz kartı filialdan sifariş edə bilərsən.
+                </p>
+            </div>
+            <div class="page_tab active" data-filter="tab7913">
+                <h4 class="tab_title">Hər ay seçdiyiniz kateqoriyalardan daha çox cashback qazanmaq imkanı</h4>
+                <div class="p_mid_desc">
+                    <ul>
+                        <li>
+                            <div class="cd_i"
+                                style="background-image:url(../static/images/petrol.svg); background-color:;">
+                            </div>
+                            <div class="cd_i_desc cd_i_desc_card">
+                                <p>Yanacaqdoldurma Məntəqələri</p>
+                                <b>4% cashback</b>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="cd_i"
+                                style="background-image:url(../static/images/restoran.svg); background-color:;">
+                            </div>
+                            <div class="cd_i_desc cd_i_desc_card">
+                                <p>Kafe və Restoranlar</p>
+                                <b>4% cashback</b>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="cd_i"
+                                style="background-image:url(../static/images/geyim.svg); background-color:;">
+                            </div>
+                            <div class="cd_i_desc cd_i_desc_card">
+                                <p>Geyim Mağazaları</p>
+                                <b>4% cashback</b>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="cd_i"
+                                style="background-image:url(../static/images/market.svg); background-color:;">
+                            </div>
+                            <div class="cd_i_desc cd_i_desc_card">
+                                <p>Market və Supermarketlər</p>
+                                <b>2% cashback</b>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- BLOCK2 -->
+        <div class="blocks" id="block-2" style="display:none">
+
+
+            <div class="docs">
+                <ul>
+                    <li>
+                        <a href="../static/pdf/antifraud_az.pdf" target="_blank">
+                            <div class="file_type pdf"></div>
+                            <div class="file_desc">
+                                <b>
+                                    Təhlükəsizlik qaydaları</b>
+                                <div class="df_section">
+                                    <div class="fu">Yüklə</div>
+                                    <span>507 KB</span>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../static/pdf/vergil_rin_od_nisl_rin_c_lb_olunan_xidm_tl_r.pdf" target="_blank">
+                            <div class="file_type pdf"></div>
+                            <div class="file_desc">
+                                <b>
+                                    Vergiyə cəlb olunan xidmətlər</b>
+                                <div class="df_section">
+                                    <div class="fu">Yüklə</div>
+                                    <span>464 KB</span>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../static/pdf/light_limit_aze.pdf" target="_blank">
+                            <div class="file_type pdf"></div>
+                            <div class="file_desc">
+                                <b>
+                                    Limitlər</b>
+                                <div class="df_section">
+                                    <div class="fu">Yüklə</div>
+                                    <span>293 KB</span>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../static/pdf/kartlar-uzre-tarifler.pdf" target="_blank">
+                            <div class="file_type pdf"></div>
+                            <div class="file_desc">
+                                <b>
+                                    Tariflər</b>
+                                <div class="df_section">
+                                    <div class="fu">Yüklə</div>
+                                    <span>220 KB</span>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../static/pdf/cashback_hesablanmasi_qaydasi.pdf" target="_blank">
+                            <div class="file_type pdf"></div>
+                            <div class="file_desc">
+                                <b>
+                                    Cashback hesablanması qaydaları</b>
+                                <div class="df_section">
+                                    <div class="fu">Yüklə</div>
+                                    <span>202 KB</span>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+
+        </div>
+        <!-- BLOCK3 -->
+        <div class="questions" id="block-3" style="display:none">
+            <div class="container">
+                <div class="page_tab active" style="display: block;">
+                    <div class="p_mid_desc">
+                    </div>
+                    <div class="faq_list">
+                        <div class="faq_item">
+                            <a href="javascript:void(0)" class="question">
+                                <p>Kart sifarişini necə edə bilərəm?</p><span></span>
+                            </a>
+                            <div class="answer" style=" padding: 0px;">
+                                <p>Ödəniş kartını sifariş etməyin bir neçə yolu var:</p>
+                                <ul>
+                                    <li>Sayt vasitəsilə</li>
+                                    <li>Yelo mobil əlavəsi vasitəsilə</li>
+                                    <li>Məlumat mərkəzi ilə əlaqə saxlamaq (981)</li>
+                                    <li><a href="/az/individuals/atms-and-branches/" target="_blank">Filiala</a>
+                                        müraciət etmək</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="faq_item">
+                            <a href="javascript:void(0)" class="question">
+                                <p>Kartımın balansını necə artıra bilərəm?</p><span></span>
+                            </a>
+                            <div class="answer" style="display: none; padding: 0px;">
+                                <p>Kart balansını aşağıdakı üsullarla artırmaq mümkündür:</p>
+                                <ul>
+                                    <li>Yelo mobil əlavəsindən</li>
+                                    <li>İnternet bank xidməti ilə</li>
+                                    <li>Terminaldan (E-manat, Milliön, Easy Pay)</li>
+                                    <li>Onlayn (<a href="http://hesab.az" target="_blank">hesab.az</a>, <a
+                                            href="http://e-pul.az" target="_blank">e-pul.az</a>)</li>
+                                    <li><a href="/az/individuals/atms-and-branches/" target="_blank">Filiala</a>
+                                        yaxınlaşaraq</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="faq_item">
+                            <a href="javascript:void(0)" class="question">
+                                <p>SMS bildiriş xidmətinə necə qoşula bilərəm?</p><span></span>
+                            </a>
+                            <div class="answer" style="display: none; padding: 0px;">
+                                <p>Kartı <a href="/az/individuals/atms-and-branches/" target="_blank">ATM</a>-ə daxil
+                                    edərək əsas menyuda “Xidmətlər” , oradan isə “SMS NOTIFICATIONS” bölməsinə daxil
+                                    olmaq lazımdır. İki dəfə mobil telefon nömrəsi daxil edildikdən sonra xidmətə
+                                    qoşulmaqla bağlı SMS gəlir.&nbsp;</p>
+                                <p>Qeyd: Xidmətdən aylıq istifadə haqqı 1.20 AZN təşkil edir"</p>
+                            </div>
+                        </div>
+                        <div class="faq_item">
+                            <a href="javascript:void(0)" class="question">
+                                <p>3D Secure kod nədir?</p><span></span>
+                            </a>
+                            <div class="answer" style="display: none; padding: 0px;">
+                                <p>3D Secure - dələduzluq hallarından mühafizə olunmaq və onlayn ödənişlərin
+                                    təhlükəsizləşdirilməsi imkanı verən texnologiyadır. Yeni Yelo kartları müştərilərə
+                                    3D Secure&nbsp;xidmətinə avtomatik olaraq qoşulmuş vəziyyətdə təqdim olunur və 3D
+                                    kodu SMS Xəbərdarlıq&nbsp;xidmətinə qoşulmadan kart sahibinə göndərilir. Onlayn
+                                    alış-veriş etdikdə, 3D Secure&nbsp;xidmətini dəstəkləyən internet-mağaza müştərinin
+                                    mobil telefonuna SMS şəklində təqdim olunan kodu daxil etməyi xahiş
+                                    edəcək.&nbsp;Xidmət ödənişsizdir. 3D secure dəstəkləyən saytlarda 3D-siz keçən
+                                    əməliyyatlar üzrə gündəlik limit məbləği bankın cari tariflərinə əsasən tətbiq
+                                    olunur.</p>
+                            </div>
+                        </div>
+                        <div class="faq_item">
+                            <a href="javascript:void(0)" class="question">
+                                <p>Kart hesabından çıxarışı necə əldə edə bilərəm?</p><span></span>
+                            </a>
+                            <div class="answer" style="display: none; padding: 0px;">
+                                <p>Kart&nbsp;üzrə çıxarışın əldə olunması aşağıdakı yollarla mümkündür:</p>
+                                <ul>
+                                    <li>Yelo mobil əlavəsindən</li>
+                                    <li><a href="/az/individuals/atms-and-branches/" target="_blank">ATM</a> vasitəsilə
+                                    </li>
+                                    <li><a href="/az/individuals/atms-and-branches/" target="_blank">Filiala</a>
+                                        yaxınlaşaraq</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="faq_item">
+                            <a href="javascript:void(0)" class="question">
+                                <p>Kartımın limitlərinə necə baxa və dəyişə bilərəm?</p><span></span>
+                            </a>
+                            <div class="answer" style="display: none; padding: 0px;">
+                                <p>Kart üzrə mövcud limitlərin izlənilməsi və dəyişilməsi üçün Yelo mobil tətbiqindən
+                                    istifadə etmək və ya <a href="/az/individuals/atms-and-branches/"
+                                        target="_blank">filiala </a>yaxınlaşmaq lazımdır.</p>
+                                <p><a href="https://www.yelo.az/site/assets/files/1094/light_limit_aze.pdf"
+                                        target="_blank">Limitlər&nbsp;(pdf)</a></p>
+                            </div>
+                        </div>
+                        <div class="faq_item">
+                            <a href="javascript:void(0)" class="question">
+                                <p>Kart üzrə limitlər nədir?</p><span></span>
+                            </a>
+                            <div class="answer" style="display: none; padding: 0px;">
+                                <p>Kart əməliyyatlarını&nbsp;daha təhlükəsiz etmək üçüm bank əməliyyatlara limitlər
+                                    təyin edir. Limitlər aşağıdakı formada olur:&nbsp;</p>
+                                <ul>
+                                    <li>Bankomatda və POS-terminal vasitəsilə nağdlaşdırma limiti</li>
+                                    <li>Karta mədaxil limiti</li>
+                                    <li>POS-terminal ödənişlərinə tətbiq olunan limit (təmaslı və təmassız)</li>
+                                    <li>Onlayn ödənişlər zamanı tətbiq olunan limit</li>
+                                    <li>Card to Card -a tətbiq olunan limit</li>
+                                </ul>
+                                <p>Bankın cari tariflərində risk zonasına daxil olan ölkələrdə dələduzluq risklərinin
+                                    daha yüksək olmasını nəzərə alaraq, həmin ölkələrdə ödəniş kartları ilə
+                                    əməliyyatların aparılması üzrə bank tərəfindən daha aşağı limitlər tətbiq olunub.
+                                </p>
+                                <p><a href="https://www.yelo.az/site/assets/files/1094/light_limit_aze.pdf"
+                                        target="_blank">Limitlər&nbsp;(pdf)</a></p>
+                            </div>
+                        </div>
+                        <div class="faq_item">
+                            <a href="javascript:void(0)" class="question">
+                                <p>Kartım itib və ya oğurlanıbsa nə etməliyəm?</p><span></span>
+                            </a>
+                            <div class="answer" style="display: none; padding: 0px;">
+                                <p>Kart üzrə əməliyyatları daha təhlükəsiz etmək üçün bank kartları&nbsp;üzrə aparılan
+                                    əməliyyatlara limitlər tətbiq edir. Əgər ödəniş kartı itib və ya oğurlanıbsa,
+                                    vəsaitin təhlükəsizliyi və öz rahatlığınız üçün kartı bloklaşdırılmağa tövsiyyə
+                                    edirik. Kartı aşağıdakı üsullarla bloklaşdırmaq mümkündür:</p>
+                                <ul>
+                                    <li>Yelo mobil əlavəsindən</li>
+                                    <li>Məlumat mərkəzi ilə əlaqə saxlayaraq (981)</li>
+                                    <li><a href="/az/individuals/atms-and-branches/" target="_blank">Filiala</a>
+                                        yaxınlaşaraq</li>
+                                    <li>24/7 fəaliyyət göstərən Azərikard Müştəri Xidmətləri Mərkəzi ilə əlaqə
+                                        saxlayaraq (194; ancaq beynəxalq zənglər üçün: +99450 225 28 00)</li>
+                                </ul>
+                                <p>Əgər itirilmiş və ya oğurlanmış kart bloka salınıb, lakin həmin kartdan artıq
+                                    əməliyyatlar aparılıbsa, bu halda banka ərizə ilə müraciət etmək
+                                    lazımdır.&nbsp;Chargeback xidməti vasitəsilə məsələ araşdırılacaq&nbsp;və mümkün
+                                    olduğu halda&nbsp;vəsait geri qaytarılacaq.</p>
+                            </div>
+                        </div>
+                        <div class="faq_item">
+                            <a href="javascript:void(0)" class="question">
+                                <p>PIN kodumu 3 dəfə səhv daxil etdim və kartım bloka düşdü. Nə etməliyəm?</p>
+                                <span></span>
+                            </a>
+                            <div class="answer" style="display: none; padding: 0px;">
+                                <p>Kart PIN kodu 3 dəfə düzgün daxil etmədiyinə görə bloka salınıbsa, aşağıdakı
+                                    üsullarla blokdan çıxarmaq mümkündür:</p>
+                                <ul>
+                                    <li>Məlumat mərkəzi ilə əlaqə saxlayaraq (981)</li>
+                                    <li><a href="/az/individuals/atms-and-branches/" target="_blank">Filiala
+                                        </a>yaxınlaşaraq</li>
+                                    <li>24/7 fəaliyyət göstərən Azərikard Müştəri Xidmətləri Mərkəzi ilə əlaqə
+                                        saxlayaraq (194; ancaq beynəxalq zənglər üçün: 012 598 46 97)</li>
+                                </ul>
+                                <p>Kartın PIN kodunu yaddan çıxıbsa, bu halda filiala yaxınlaşaraq bankın PIN Reset
+                                    xidmətindən yararlanmaq olar (xidmət haqqı 3 AZN-dir).</p>
+                            </div>
+                        </div>
+                        <div class="faq_item">
+                            <a href="javascript:void(0)" class="question">
+                                <p>Məlumat Mərkəzi ilə əlaqə saxladım və açar sözünü təqdim etməyi xahiş etdilər. Açar
+                                    sözü nədir?</p><span></span>
+                            </a>
+                            <div class="answer" style="display: none; padding: 0px;">
+                                <p>Açar sözü məlumat mərkəzi ilə əlaqə saxlandığı zaman məlumatın təqdim olunması üçün
+                                    təyin edilir. Məlumat mərkəzi (981) və ya 24/7 fəaliyyət göstərən Azərikard Müştəri
+                                    Xidmətləri Mərkəzi (194; 012 598 46 97) ilə əlaqə saxlandığı zaman açar sözünü
+                                    təqdim edərək kart üzrə məlumat əldə etmək olar.</p>
+                            </div>
+                        </div>
+                        <div class="faq_item">
+                            <a href="javascript:void(0)" class="question">
+                                <p>"Surcharge" komissiyası nə deməkdir?</p><span></span>
+                            </a>
+                            <div class="answer" style="display: none; padding: 0px;">
+                                <p>Kartın məxsus olduğu bankın mövcud komissiyasından əlavə qarşı tərəfin tətbiq edə
+                                    biləcəyi əlavə komissiya haqqı "surcharge" adlanır. Məsələn, Yelo banka məxsus
+                                    kartdan Azərikard xarici, ölkə daxili bankomatlarda nağdlaşdırma bankın tariflərinə
+                                    əsasən 2% (min. 3 AZN / USD /&nbsp;EUR ) təşkil etdiyi halda, bankomatın məxsus
+                                    olduğu bank da müştəridən nağdlaşdırmaya görə əlavə komissiya tuta bilər. Digər bank
+                                    tərəfindən tutulan həmin əlavə komissiya isə "surcharge" komissiyasıdır. "Surcharge"
+                                    komissiyası&nbsp;tətbiq olunacağı halda müştər bu barədə məlumatlandırılır.</p>
+                            </div>
+                        </div>
+                        <div class="faq_item">
+                            <a href="javascript:void(0)" class="question">
+                                <p>Avtorizasiya kodu nə deməkdir?</p><span></span>
+                            </a>
+                            <div class="answer" style="display: none; padding: 0px;">
+                                <p>Avtorizasiya kodu ödəniş kartı üzrə aparılan hər əməliyyatı identifikasiya edən
+                                    unikal koddur. Həmin kod təqdim olunan qəbzdə 6 simvollu formada öz əksini tapır.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="faq_item">
+                            <a href="javascript:void(0)" class="question">
+                                <p>Cashback nədir?</p><span></span>
+                            </a>
+                            <div class="answer" style="display: none; padding: 0px;">
+                                <p>Tərəfdaş şəbəkəsi daxilində və xaricində olan mağazalarda ödəniş kartı ilə aparılan
+                                    ödənişlər zamanı məbləğin bir hissəsinin hesaba geri qayıtması "cashback"
+                                    adlanır.&nbsp; <a href="/az/individuals/cashback/" target="_blank">Cashback
+                                        təkiflərimiz</a></p>
+                            </div>
+                        </div>
+                        <div class="faq_item">
+                            <a href="javascript:void(0)" class="question">
+                                <p>Dollar valyutasında olan kartımla Avro ilə ödəniş edə bilərəm?</p><span></span>
+                            </a>
+                            <div class="answer" style="display: none; padding: 0px;">
+                                <p>Bəli, lakin bu zaman bankın cari tariflərində qeyd olunan konvertasiya haqqını ödəmək
+                                    lazım olacaq.&nbsp;Ödənişləri avro valyutasında etmək üçün Yelo bankdan avro
+                                    valyutalı kart da əldə etmək olar. Bu zaman kartdan konvertasiya haqqı
+                                    tutulmayacaq.<br>
+                                    &nbsp;</p>
+                            </div>
+                        </div>
+                        <div class="faq_item">
+                            <a href="javascript:void(0)" class="question">
+                                <p>Kartımın PIN kodunu unutmuşam. Bu halda nə edim?</p><span></span>
+                            </a>
+                            <div class="answer" style="display: none; padding: 0px;">
+                                <p>PIN kodunu təyin etmək üçün istənilən &nbsp;filialdaki POS-terminalda PIN Reset
+                                    xidmətindən istifadə etmək olar.&nbsp;&nbsp;PIN Reset xidmətindən istifadə aşağıdakı
+                                    şəkildə həyata keçirilir:</p>
+                                <ul>
+                                    <li>PIN kodun bərpa olunması üçün xüsusi ərizə forması doldurulur</li>
+                                    <li>Müraciətə əsasən köhnə PIN kod silinir</li>
+                                    <li>Əməliyyatçı tərəfindən təqdim olunan POS-terminal vasitəsilə yeni PIN kod
+                                        yaradır</li>
+                                </ul>
+                                <p>PIN Reset üzrə xidmət haqqı 3 AZN təşkil edir.</p>
+                            </div>
+                        </div>
+                        <div class="faq_item">
+                            <a href="javascript:void(0)" class="question">
+                                <p>Kartımı necə bloklaşdıra bilərəm?</p><span></span>
+                            </a>
+                            <div class="answer" style="display: none; padding: 0px;">
+                                <p>Kartı aşağıdakı üsullarla bloklaşdırmaq mümkündür:</p>
+                                <ul>
+                                    <li>Yelo mobil əlavəsindən</li>
+                                    <li>Məlumat mərkəzi ilə əlaqə saxlayaraq (981)</li>
+                                    <li><a href="/az/individuals/atms-and-branches/" target="_blank">Filiala
+                                        </a>yaxınlaşaraq</li>
+                                    <li>24/7 fəaliyyət göstərən Azərikard Müştəri Xidmətləri Mərkəzi &nbsp;(194; 012 598
+                                        46 97; ancaq beynəxalq zənglər üçün - 050 225 &nbsp;28 00) ilə əlaqə saxlayaraq
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="order_form">
+        <div class="of_title">Yelo kart əldə etmək üçün 3 sadə addım</div>
+        <div class="order_steps">
+            <ul>
+                <li>
+                    <span>1</span>
+                    <p>Onlayn sifariş formasını doldur</p>
+                </li>
+                <li>
+                    <span>2</span>
+                    <p>Yelo karta sahib ol</p>
+                </li>
+                <li>
+                    <span>3</span>
+                    <p>Kartın istifadəsindən zövq al</p>
+                </li>
+            </ul>
+        </div>
+        <div class="form_self card_order" id="card_from">
+            <div class="form_card" style="background-image: url(../static/images/55.png)"></div>
+            <b>Yelo Light sifariş et</b>
+
+            
+            <form class="credit-form">
+                <div class="form-container">
+                    <div>
+                        <select class="choose-card" form="card-form">
+                            <option value="prefiks">Kartın növünü seçin</option>
+                            <option value="050">Visa</option>
+                            <option value="051">Mastercard</option>
+                        </select>
+                    </div>
+                    <br>
+                    <div class="form_tripl">
+                        <div class="form_item">
+                            <label class="chk_bx radio_bx">
+                                <input type="radio" value="azn" class="ajax_check" name="card_currency" checked="">
+                                <span>Manat</span>
+                            </label>
+                        </div>
+                        <div class="form_item">
+                            <label class="chk_bx radio_bx">
+                                <input type="radio" value="usd" name="card_currency">
+                                <span>Dollar</span>
+                            </label>
+                        </div>
+                        <div class="form_item">
+                            <label class="chk_bx radio_bx">
+                                <input type="radio" value="eur" name="card_currency">
+                                <span>Avro</span>
+                            </label>
+                        </div>
+                    </div><br>
+                    <div class="container"><input id="column-left" type="text" name="first-name" placeholder="Ad" />
+                        <input id="column-right" type="text" name="last-name" placeholder="Soyad" />
+                    </div>
+                    <br>
+                    <div class="container3">
+                        <select id="prefix" form="prefix-form">
+                            <option value="prefiks">Prefiks</option>
+                            <option value="050">050</option>
+                            <option value="051">051</option>
+                            <option value="055">055</option>
+                            <option value="050">070</option>
+                            <option value="051">077</option>
+                            <option value="055">099</option>
+                            <option value="055">010</option>
+                        </select>
+                        <input id="column-l" type="text" name="number" placeholder="Mobil nömrə" />
+                    </div>
+                    <br>
+                    <div class="container4"><input id="code" type="text" name="number" placeholder="Kod sözü" />
+                        <select id="branch" form="branch-form">
+                            <option disabled="" selected="">Filialı seç</option>
+                            <option value="1178">Baş ofis / MXM (20 yanvar m/s)</option>
+                            <option value="1196">28 May filialı (Qış parkı)</option>
+                            <option value="1221">Filial № 5 (Sahil m/s)</option>
+                            <option value="1223">Mərkəz filialı</option>
+                            <option value="7162">Salyan filialı</option>
+                            <option value="7215">Ağcabədi filialı</option>
+                            <option value="1222">Filial № 11 (Elmlər Akademiyası m/s)</option>
+                            <option value="1224">Filial Nərimanov</option>
+                            <option value="1197">Filial № 4 (Xalqlar Dostluğu m/s)</option>
+                            <option value="5851">Mərdəkan filialı</option>
+                            <option value="4020">Filial Sədərək TM</option>
+                            <option value="1226">Filial Sumqayıt</option>
+                            <option value="1227">Filial Gəncə</option>
+                            <option value="1228">Filial Bərdə</option>
+                            <option value="1229">Filial Lənkəran</option>
+                        </select>
+                    </div><br>
+                    <div class="container"><input id="id-img" type="file" name="front" placeholder="Ş.V-in ön tərəfi" />
+                        <input id="id-img" type="file" name="back" placeholder="Ş.V-in arxa tərəfi" />
+                    </div>
+
+                </div>
+            </form>
+            <div class="form-bottom">
+                <div class="inner">
+                    <div class="inner-text" style="display:flex">
+                        <img src="../static/images/shield_gray_icon.svg" style="margin-bottom:25px">
+                        <p class="ending-text">“Sifariş et” basmaqla Azərbaycan Kredit Bürosundan<br> kredit tarixçəsi
+                            və
+                            Asan finansdan fərdi məlumatların <br>alınmasına razılıq verirəm.</p>
+                        <button type="button" class="btn btn-warning">Sifariş et</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+<section class="stories">
+    <div class="main-container">
+        <h2 class="section-title">
+            Storilər<span>3</span>
+        </h2>
+        <!-- flex -->
+        <div class="d-flex justify-content-between">
+            <div class="stories-item d-flex justify-content-between align-items-start">
+                <div class="stories-item__info">
+                    <p class="stories-item__title">
+                        Kredit
+                    </p>
+                    <p class="stories-item__subtitle">
+                        Xərclərini təxirə salma, hər zaman dəstək üçün Yelo Bank var
+                    </p>
+                </div>
+                <div class="stories-item__img">
+                    <img src="{{ url_for('static', filename='images/stories-kredit.png') }}" alt="stories-kredit">
+                </div>
+            </div>
+            <div class="stories-item d-flex justify-content-between align-items-start">
+                <div class="stories-item__info">
+                    <p class="stories-item__title">
+                        Cashback
+                    </p>
+                    <p class="stories-item__subtitle">
+                        600-dən çox partnyoru özündə birləşdirən Cashback proqramı
+                    </p>
+                </div>
+                <div class="stories-item__img">
+                    <img src="{{ url_for('static', filename='images/stories-cashback.png') }}" alt="stories-cashback">
+                </div>
+            </div>
+            <div class="stories-item d-flex justify-content-between align-items-start">
+                <div class="stories-item__info">
+                    <p class="stories-item__title">
+                        Yelo kart
+                    </p>
+                    <p class="stories-item__subtitle">
+                        Yelo Kart hər əməliyyatda rahatlıq anlayışını dəyişəcək
+                    </p>
+                </div>
+                <div class="stories-item__img">
+                    <img src="{{ url_for('static', filename='images/stories-yelo-kart.png') }}" alt="stories-yelo-kart">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script>
+
+    function showDiv1() {
+        document.getElementById('block-1').style.display = "block";
+        document.getElementById('block-2').style.display = "none";
+        document.getElementById('block-3').style.display = "none";
+    }
+
+    function showDiv2() {
+        document.getElementById('block-2').style.display = "block";
+        document.getElementById('block-1').style.display = "none";
+        document.getElementById('block-3').style.display = "none";
+    }
+
+    function showDiv3() {
+        document.getElementById('block-3').style.display = "block";
+        document.getElementById('block-1').style.display = "none";
+        document.getElementById('block-2').style.display = "none";
+    }
+</script>
+<script src="{{ url_for('static', filename='js/cards-info.js') }}"></script>
+{% endblock %}

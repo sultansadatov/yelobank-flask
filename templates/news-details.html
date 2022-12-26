@@ -1,0 +1,83 @@
+{% extends 'base.html' %}
+{% block styles %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/news-details.css') }}">
+{% endblock %}
+    
+{% block title %}
+    {{new.title}} | Yelo Bank
+{% endblock %}
+{% block content %}
+    <section class="news-details">
+        <div class="main-container">
+            <div class="news-details__info">
+                <a href="/news" class="news-direct__link">
+                    Xəbərlər siyahısı
+                </a>
+    
+                <h2 class="news-details__title">
+                    Xəbərlər
+                </h2>
+                <p class="news-details__text">
+                    {{new.title}}
+                </p>
+    
+                <p class="news-details__time">
+                    {{news_time}}
+                </p>
+            </div>
+
+            <p class="news-details__content">
+                {{new.news_content}}
+            </p>
+
+            <button type="button" class="btn btn-outline-primary text-center mx-auto d-block" style="width: 120px" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                Share <i class="fa-solid fa-link"></i>
+            </button>
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title">Sosial mediada paylaşın <i class="fa-solid fa-link"></i></h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body d-flex mx-auto">
+                      <div class="me-4">
+                        <a href="/" class="text-secondary">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                      </div>
+
+                      <div class="me-4">
+                        <a href="/" class="text-secondary">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                      </div>
+
+                      <div class="me-4">
+                        <a href="/" class="text-secondary">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                      </div>
+
+                      <div class="me-4">
+                        <a href="/" class="text-secondary">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                      </div>
+
+                      <div>
+                        <a href="/" class="text-secondary">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-primary">Share</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </div>
+    </section>
+{% endblock %}

@@ -1,0 +1,146 @@
+{% extends 'base.html' %}
+{% block styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='styles/credits.css') }}">
+<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+{% endblock %}
+
+{% block title %}
+deposits
+{% endblock %}
+
+{% from "_formhelpers.html" import render_field %}
+
+{% block content %}
+
+<div class="creds">
+    <div class="h1">
+        <h1>Online kredit sifarişi</h1>
+    </div>
+    <br>
+
+
+    <form class="credit-form" action="" method="POST">
+        {{ form.csrf_token }}
+        <div class="form-container">
+            <div class="container">
+                <div class="div-left">
+                    <p>Aylıq əmək haqqı</p>
+                    <div class="lc_c"><output id="amount" type="number" value="2500" min="350" max="5000"
+                            oninput="range1.value=amount.value">2500</output>AZN</div>
+                    <input type="range" id="range1" value="2500" min="350" max="5000"
+                        style="--min: 350; --max:5000; --val:2500;" oninput="amount.value=range1.value">
+                </div>
+                <div class="div-right">
+                    <p>Kredit məbləği</p>
+                    <div class="lc_c"><output id="amount2" oninput="range2.value=amount2.value">15000</output>AZN</div>
+                    <input type="range" id="range2" value="15000" min="300" max="30000"
+                        style="--min: 300; --max:30000; --val:15000;" oninput="amount2.value=range2.value">
+                </div>
+            </div>
+            <div class="container2">
+                <div class="d-flex">
+                    <div class="form-item w-50">
+
+                        {{ render_field(form.first_name)}}
+                    </div>
+
+                    <div class="form-item w-50">
+
+                        {{ render_field(form.last_name)}}
+                    </div>
+                </div>
+                <br>
+
+                <div class="d-flex">
+                    <div class="form-item w-50">
+                        {{ render_field(form.job)}}
+                    </div>
+                    <div class="form-item w-50 d-flex">
+                        <div class="form-item w-30">
+                            {{ render_field(form.prefix)}}
+
+                        </div>
+                        <div class="form-item w-70">
+                            {{ render_field(form.p_number)}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="form-bottom">
+            <div class="inner">
+                <div class="inner-text" style="display:flex">
+                    <img src="../static/images/shield_gray_icon.svg" style="margin-bottom:25px">
+                    <p class="ending-text">“Sifariş et” basmaqla Azərbaycan Kredit Bürosundan<br> kredit tarixçəsi və
+                        Asan finansdan fərdi məlumatların <br>alınmasına razılıq verirəm.</p>
+                    <button type="submit" class="btn btn-warning">Sifariş et</button>
+                </div>
+            </div>
+        </div>
+    </form>
+    
+    <div class="ending">
+        <div class="last-inner d-flex justify-content-between">
+
+            <div class="last-text">
+                <h2>Mobil tətbiqi indi yüklə və tam onlayn kredit əldə et</h2>
+                <br><br>
+                <p>Yelo App-də onlayn kredit sifarişi və bir çox üstünlüklər səni gözləyir.
+                    Banka gəlmədən kredit almaq istəyirsənsə, Yelo app-də sənin üçün təcili kredit almaq imkanı var.</p>
+                <br><br>
+                <div class="links"> <a href="https://apps.apple.com/az/app/yelo/id1515449668" class="appstore"><img
+                            src="../static/images/appstore_black_icon.svg" alt=""></a>
+                    <a href="https://play.google.com/store/apps/details?id=az.yelo.app&amp;hl=ru"
+                        class="googleplay"><img src="../static/images/googleplay_black_icon.svg" alt=""></a>
+                </div>
+            </div>
+            <div class="qr_code">
+                <span><img src="../static/images/qr_code.svg" alt=""></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="ending-p">
+        <p>Onlayn kredit müraciəti artıq daha asandır. İndi, olduğunuz yeri tərk etmədən internet vasitəsi ilə kredit
+            sifariş edə bilərsiniz.
+            Sifariş etmək üçün ilk öncə aylıq əməkhaqqınızı və istədiyiniz kredit məbləğini, daha sonra isə tələb olunan
+            digər məlumatları
+            adınızı, soyadınızı, iş yerinizi və əlaqə nömrənizi) qeyd etməyiniz kifayətdir.</p>
+        <br>
+        <p>Artıq Yelo Bankdan kredit götürmək çox asan və tezdir. İndi Yelo app-i yükləyin və bank krediti sürətlə əldə
+            edin.
+            Sizə uyğun olan ən sərfəli şərtlərlə və aşağı faizlə online kredit sifarişi ilə evdən çıxmadan kredit əldə
+            etmək fürsətindən
+            istifadə edin! Onlayn istehlak krediti sifarişi xidmətimiz aktivdir. Bundan başqa Daşınmaz əmlak girovlu
+            kredit, Əmanət təminatlı
+            kredit və ya İpoteka krediti məhsullarımızla biz müştərilərimizə dəstək olmağa hazırıq.</p>
+        <br>
+        <p>Siz Yelo Bankın saytında başqa kredit növləri ilə də tanış ola bilərsiniz. İstənilən online kredit sifarişi
+            üçün bankımızın
+            sosial media və digər kommunikasiya kanalları ilə müraciət edə bilərsiniz. Sizə tecili kredit lazımdırsa,
+            onlayn kredit sifarişi
+            müraciətinizə tez bir zamanda cavab veriləcəyindən əmin ola bilərsiniz.</p>
+    </div>
+</div>
+<script src="{{ url_for('static', filename='js/credit-calculator.js') }}"></script>
+<script>
+    
+  $(document).ready(function(){
+    let btns = $('.form-control')
+
+    for(var i=0; i< btns.length; i++) {
+      $(btns[i]).on('keyup', function(e){
+        $(this).prev().css("display", "none")
+      })
+    }
+  })
+
+</script>
+
+
+{% endblock %}
+<!-- <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>       -->

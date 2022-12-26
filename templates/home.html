@@ -1,0 +1,484 @@
+{% extends 'base.html' %}
+{% block styles %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/home.css') }}">
+{% endblock %}
+{% block title %}
+    Yelo Bank - Müasir Bank Xidmətləri
+{% endblock %}
+
+{% block content %}
+
+<!-- intro section -->
+<section class="intro">
+    <!-- <div class="main-container"> -->
+        <div class="intro-slider">
+                  
+            <div class="intro-slider__item">
+                <div class="intro-slider__left">
+                    <div class="intro-slider__info">
+                        <h2 class="intro-slider__title">
+                            Bu 13 sənə düşərli olacaq!
+                        </h2>
+    
+                        <p class="intro-slider__subtitle">
+                            Tam onlayn kredit
+                        </p>
+    
+                        <a href="/" class="intro-slider__link intro-slider__btn intro-pos_abs">
+                            Sifariş et 
+                        </a>
+                    </div>
+                </div>
+
+                <div class="intro-slider__right">
+                    <img src="{{ url_for('static', filename='images/slider1.png') }}" alt="" class="intro-slider__bg">
+                </div>
+            </div>
+
+            <div class="intro-slider__item">
+                <div class="intro-slider__left">
+                    <div class="intro-slider__info">
+                        <h2 class="intro-slider__title">
+                            Banka gəlmədən
+                        </h2>
+
+                        <p class="intro-slider__subtitle">
+                            Tam onlayn kredit
+                        </p>
+
+                        <a href="/" class="intro-slider__btn intro-pos_abs intro-slider__arrow">
+                            Daha ətraflı <!-- <i class="fa-solid fa-arrow-right"></i> -->
+                        </a>
+                    </div>
+                </div>
+
+                <div class="intro-slider__right">
+                    <img src="{{ url_for('static', filename='images/slider2.png') }}" alt="" class="intro-slider__bg">
+                </div>
+            </div>
+
+            <div class="intro-slider__item">
+                <div class="intro-slider__left">
+                    <div class="intro-slider__info">
+                        <h2 class="intro-slider__title">
+                            Ad günü hədiyyəsi
+                        </h2>
+    
+                        <p class="intro-slider__subtitle">
+                            Endirimli və komissiyasız kredit
+                        </p>
+    
+                        <div class="intro-slider__btns intro-pos_abs">
+                            <a href="/" class="intro-slider__link intro-slider__btn">
+                                Sifariş et
+                            </a>
+
+                            <a href="/" class="intro-slider__btn intro-slider__arrow">
+                                Daha ətraflı
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="intro-slider__right">
+                    <img src="{{ url_for('static', filename='images/slider3.jpg') }}" alt="" class="intro-slider__bg">
+                </div>
+            </div>
+
+            <div class="intro-slider__item">
+                <div class="intro-slider__left">
+                    <div class="intro-slider__info">
+                        <h2 class="intro-slider__title">
+                            Baxışını dəyiş
+                        </h2>
+    
+                        <div class="intro-slider__btns intro-pos_abs">
+                            <a href="/" class="intro-slider__link intro-slider__btn">Kart sifarişi</a>
+
+                            <a href="/" class="intro-slider__btn intro-slider__arrow">
+                                Daha ətraflı
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="intro-slider__right">
+                    <img src="{{ url_for('static', filename='images/slider4.png') }}" alt="" class="intro-slider__bg">
+                </div>
+            </div>
+
+            <div class="intro-slider__item">
+                <div class="intro-slider__left">
+                    <div class="intro-slider__info">
+                        <h2 class="intro-slider__title">
+                            Krediti cəmi 7 dəqiqəyə al
+                        </h2>
+    
+                        <p class="intro-slider__subtitle">
+                            Onlayn sifariş et, filiala gəlmə
+                        </p>
+    
+                        <a href="/" class="intro-slider__link intro-slider__btn intro-pos_abs">
+                            Sifariş et
+                        </a>
+                    </div>
+                </div>
+
+                <div class="intro-slider__right">
+                    <img src="{{ url_for('static', filename='images/slider5.jpg') }}" alt="" class="intro-slider__bg">
+                </div>
+            </div>
+        </div>
+    <!-- </div> -->
+</section>
+
+
+<!-- stories section -->
+<section class="stories">
+    <div class="main-container">
+        <h2 class="section-title">
+            Storilər<span>3</span>
+        </h2>
+
+        <!-- flex -->
+        <div class="d-flex justify-content-between">
+            <div class="stories-item d-flex justify-content-between align-items-start">
+                <div class="stories-item__info">
+                    <p class="stories-item__title">
+                        Kredit
+                    </p>
+                    <p class="stories-item__subtitle">
+                        Xərclərini təxirə salma, hər zaman dəstək üçün Yelo Bank var
+                    </p>
+                </div>
+
+                <div class="stories-item__img">
+                    <img src="{{ url_for('static', filename='images/stories-kredit.png') }}" alt="stories-kredit">
+                </div>
+            </div>
+
+            <div class="stories-item d-flex justify-content-between align-items-start">
+                <div class="stories-item__info">
+                    <p class="stories-item__title">
+                        Cashback
+                    </p>
+                    <p class="stories-item__subtitle">
+                        600-dən çox partnyoru özündə birləşdirən Cashback proqramı
+                    </p>
+                </div>
+
+                <div class="stories-item__img">
+                    <img src="{{ url_for('static', filename='images/stories-cashback.png') }}" alt="stories-cashback">
+                </div>
+            </div>
+
+            <div class="stories-item d-flex justify-content-between align-items-start">
+                <div class="stories-item__info">
+                    <p class="stories-item__title">
+                        Yelo kart
+                    </p>
+                    <p class="stories-item__subtitle">
+                        Yelo Kart hər əməliyyatda rahatlıq anlayışını dəyişəcək
+                    </p>
+                </div>
+
+                <div class="stories-item__img">
+                    <img src="{{ url_for('static', filename='images/stories-yelo-kart.png') }}" alt="stories-yelo-kart">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- calculator section -->
+<div class="calculator">
+    <div class="main-container">
+        <div class="d-flex justify-content-between">
+            <div class="calculator-left">
+                <div class="calculator-content d-flex justify-content-between align-items-start">
+                    <div class="calculator-info">
+                        <p class="calculator-title">
+                            Yelo Light
+                        </p>
+                        <p class="calculator-subtitle">
+                            İstənilən ödənişlər üçün doğru seçim
+                        </p>   
+                        <div class="d-flex justify-content-between">
+                            <div class="left">
+                                <p>
+                                    Qalığa gəlir
+                                </p>
+                                <span>
+                                    5%
+                                </span>
+                            </div>
+
+                            <div class="right">
+                                <p>
+                                    Cashback
+                                </p>
+                                <span>
+                                    30%-dək
+                                </span>
+                            </div>
+                        </div>
+
+                        <a href="/" class="order-btn">
+                            Sifariş et
+                        </a>
+                    </div>
+                    <div class="calculator-img">
+                        <img src="{{ url_for('static', filename='images/cart-image.png') }}" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="calculator-right">
+                <script type="text/javascript"> var credit_json={"1-12":[{"300-500":14,"500-1000":14,"1000-2000":14,"2000-15000":14},{"300-500":14,"500-1000":14,"1000-2000":14,"2000-15000":14}],"13-24":[{"300-500":16,"500-1000":16,"1000-2000":16,"2000-15000":16},{"300-500":16,"500-1000":16,"1000-2000":16,"2000-15000":16}],"25-36":[{"300-500":18,"500-1000":18,"1000-2000":18,"2000-15000":18},{"300-500":18,"500-1000":18,"1000-2000":18,"2000-15000":18}],"37-48":[{"300-500":20,"500-1000":20,"1000-2000":20,"2000-15000":20},{"300-500":20,"500-1000":20,"1000-2000":20,"2000-15000":20}]}; </script>
+                <div class="calculator-content">
+                    <input type="hidden" name="pay_month_credit" value="912">
+                    <input type="hidden" name="pay_month_percent" value="20">
+                    <div class="d-flex justify-content-between">
+                        <p class="calculator-title">
+                            Kredit kalkulyatoru
+                        </p>
+                        <a href="/" class="calculator-details text-decoration-none">
+                            Daha ətraflı <i class="fa-solid fa-arrow-right-long"></i>
+                        </a>
+                    </div>   
+                    
+                    <div class="calculator-main">
+                        <div class="lc_inputs d-flex justify-content-between">
+                            <input type="hidden" name="calc_type" value="1017" />
+                            <div class="lc_salary calculator-item">
+                                <p>Aylıq əmək haqqı</p>
+                                <input name="salary" type="number" value="7500" class="range_result" />
+                                <div class="lc_c">AZN</div>
+                                <input type="range" min="350" max="15000" step="100" value="7500" style="--min: 350; --max: 15000; --val:7500;" class="range">
+                            </div>
+                            <div class="lc_amount calculator-item">
+                                <p>Məbləğ</p>
+                                <input name="credit" type="number" value="15000" class="range_result" />
+                                <div class="lc_c">AZN</div>
+                                <input type="range" min="300" max="30000" step="100" value="15000" style="--min: 300; --max: 30000; --val:15000;" class="range">
+                            </div>
+                            <div class="lc_term calculator-item">
+                                <p>Müddət</p>
+                                <input name="month" data-max="48" type="number" value="12" class="range_result" />
+                                <div class="lc_c">ay</div>
+                                <input type="range" min="6" max="48" step="1" value="12" style="--min: 6; --max: 48; --val:12;" class="range">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="calcultor-right__footer d-flex justify-content-between">
+                        <!-- <div class="calculator-price d-flex">
+                            <div>
+                                <p>
+                                    Aylıq ödəniş
+                                </p>
+                                <span>
+                                    <span id="loan-price">1346.81</span> AZN
+                                </span>
+                            </div>
+                        </div> -->
+                        <div class="calculator-price" style="text-align:right;width:33%;">
+                            <p>Aylıq ödəniş</p>
+                            <b id="my_month_pay">1346.<span style="font-size:10px;">81</span><span> AZN</span></b>
+                            </div>
+                        <!-- <div class="lc_r_item" style="display:none;">
+                            <p>İllik faiz dərəcəsi</p>
+                            <b id="my_year_pay" style="display:none;">22089.<span style="font-size:10px;">34</span><span> AZN</span></b>
+                            <b id="my_percent">16<span> %</span></b>
+                            </div> -->
+                        <a href="/" class="order-btn">
+                            Kredit sifarişi
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- currency section -->
+<section class="currency">
+    <div class="main-container">
+        <h2 class="section-title">
+            Sizin üçün faydalı
+        </h2>
+        <div class="d-flex justify-content-between">
+            <div class="currency-left d-flex justify-content-between">
+                <div class="currency-left__info">
+                    <h3 class="currency-left__title">
+                        YeloBank App
+                    </h3>
+                    <p class="currency-left__subtitle">
+                        Yelo-dan yeni və parlaq mobil əlavə. Hesablarını izlə, köçürmə və ödənişlərini sürətli et.
+                    </p>
+
+                    <div class="currency-left__downloads d-flex justify-content-between align-items-center">
+                        <div class="currency-downloads__item">
+                            <span>
+                                Yüklə
+                            </span>
+                            <p>
+                                App Store
+                            </p>
+                        </div>
+
+                        <div class="currency-downloads__item">
+                            <span>
+                                Yüklə
+                            </span>
+                            <p>
+                                Google Play
+                            </p>
+                        </div>
+
+                        <div class="currency-downloads__item">
+                            <span>
+                                Yüklə
+                            </span>
+                            <p>
+                                AppGallery
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="currency-left__img">
+                    <div class="app_phone"></div>
+                    <div class="app_self"></div>
+                </div>
+            </div>
+
+            <div class="currency-right">
+                <div class="currency-right__top d-flex justify-content-between">
+                    <h3 class="currency-right__title">
+                        Valyuta məzənnələri
+                    </h3>
+
+                    <select name="cash" id="" class="currency-change_cash">
+                        <option value="cash">
+                            Nağd
+                        </option>
+                        <option value="cashless">
+                            Nağdsız
+                        </option>
+                    </select>
+                </div>
+                <div class="currency-calculator">
+                    <div class="currency-line d-flex justify-content-between">
+                        <input type="number" placeholder="Satıram" value="" class="input_currency"/>
+                        <select name="from" class="current-currency">
+                            <option value="AZN" selected>AZN</option>
+                            <option value="USD">USD</option>
+                            <option value="EUR">EUR</option>
+                        </select>
+                    </div>
+
+                    <div class="currency-line d-flex justify-content-between">
+                        <p class="result_currency">Alıram</p>
+                        <select name="to" class="current-currency">
+                            <option value="AZN">AZN</option>
+                            <option value="USD" selected>USD</option>
+                            <option value="EUR">EUR</option>
+                        </select>
+                    </div>
+
+                    <div class="currency-result d-flex justify-content-between">                        
+                        <div class="currency-result__item">
+                            <p class="currency-item__title">
+                                Valyuta
+                            </p>
+                            <p>USD</p>
+                            <p>EUR</p>
+                        </div>
+
+                        <div class="currency-result__item">
+                            <p class="currency-item__title">
+                                Alış
+                            </p>
+                            <p>{{usd_get}}</p>
+                            <p>{{eur_get}}</p>
+                        </div>
+
+                        <div class="currency-result__item">
+                            <p class="currency-item__title">
+                                Satış
+                            </p>
+                            <p>{{usd_sales}}</p>
+                            <p>{{eur_sales}}</p>
+                        </div>
+                    </div>
+                </div>
+
+                <p>
+                    Region filiallarında məzənnələr fərqli ola bilər
+                </p>
+                <a href="/" class="currency-details__link d-flex justify-content-between">
+                    <span>
+                        Bütün məzənnələr
+                    </span>
+                    <i class="fa-solid fa-arrow-right-long"></i>
+                </a>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- news section -->
+<section class="news">
+    <div class="main-container">
+        <h2 class="section-title">
+            Son xəbərlər
+        </h2>
+
+        {% if news %}
+            <div class="news-container">
+                {% for new in news %}
+                    <div class="news-item">
+                        <div class="news-text fw-bold ">
+                            {{new.title}}
+                        </div>
+
+                        <div class="d-flex justify-content-between">
+                            <div class="w-100 news-details__link d-flex justify-content-between">
+                                <a href="/" class="text-decoration-none">
+                                    Daha ətraflı <i class="fa-solid fa-arrow-right-long"></i>
+                                </a>
+
+                                <div class="news-time">
+                                    {{new.created_at.strftime('%-d %B %Y')}}
+                                </div>
+                            </div>
+                        </div>
+                        <a href="/news/{{new.id}}" class="news-link"></a>
+                    </div>
+                {% endfor %}
+            </div>
+
+            
+        {% endif %}
+
+        <a href="/news" class="btn btn-outline-primary news-details">
+            Bütün xəbərlər <i class="fa-solid fa-arrow-right-long"></i>
+        </a>
+    </div>
+</section>
+
+
+{% block scripts %}
+    <script src="{{ url_for('static', filename='js/credit-calculator.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/slider.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/currency.js') }}"></script>
+{% endblock %}
+
+{% endblock content %}

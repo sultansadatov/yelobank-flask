@@ -1,0 +1,190 @@
+
+{% extends 'base.html' %}
+{% block styles %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/cards.css') }}">
+{% endblock %}
+    
+{% block title %}
+    card
+{% endblock %}
+
+{% block content %}
+
+<div style="max-width:1120px;margin: 0 auto; padding:0 20px;">
+    <div class="first_text" >
+
+        <h1 style="font-size:60px;margin-bottom: 20px;">Kartlar</h1>
+        <p>Online kart sifarişi xidməti: İndi siz evdən çıxmadan plastik kart sifariş edə bilərsiniz.
+             Yelo Bankın təqdim etdiyi plastik kartlar ilə üstünlüklərdən yararlanmaq üçün tələsin.
+              İstənilən yerdə istifadəsinin rahatlığı və üstünlükləri ilə Yelo Bank hesab kartları hər kəsin ürəyincə olacaq.</p>
+
+    </div>
+    <div class="card_list">
+       <div class="common_item yelo_bg" >
+         <div class="inner_text">
+          <div class="card_name">Yelo Light</div>
+           <div class="card_paragraph">Yelo kart rahatlıq anlayışını dəyişəcək - rahat xərcləyəcəksən, rahat izləyəcəksən, qazanacaqsan, endirimlər alacaqsan.</div>
+             <div class="card_column">
+               <div class="card_inner">
+               <p>Müddət</p>
+               <b>1 il / 3 il</b>
+               </div>
+                <div class="card_inner">
+                <p>Valyuta</p>
+                <b>AZN / USD / EUR</b>
+                </div>
+                 <div class="card_inner">
+                 <p>Cashback</p>
+                 <b>30%-dək</b>
+                 </div>
+             </div>
+             <ul>
+             <li>
+             <a href="/az/individuals/cards/yelo-kart-debet/#order_form" class="button">
+              <span>
+                Sifariş et
+              </span>
+             </a>
+             </li>
+             <li id="more_info">
+             <a href="/az/individuals/cards/yelo-kart-debet/" class="button2">Daha ətraflı <img src="../static/images/bl_arr_bttn.svg" ></a>
+             </li>
+             </ul>
+            </div>
+              <div class="card_img">
+                  <div class="card_atv atvImg">   
+                        <div class="image"></div>
+                  </div>
+                </div>
+            </div> 
+       
+          <div class="common_item yelo_bg" >
+            <div class="inner_text">
+             <div class="card_name">Yelo Premium</div>
+              <div class="card_paragraph">Yüksək statusun göstəricisi olan bu kart sahibinə yalnız Azərbaycanda deyil, hər yerdə və hər zaman eksklüziv imkanlar yaradır.</div>
+                <div class="card_column">
+                  <div class="card_inner">
+                  <p>Müddət</p>
+                  <b>3 il</b>
+                  </div>
+                   <div class="card_inner">
+                   <p>Valyuta</p>
+                   <b>AZN / USD / EUR</b>
+                   </div>
+                    <div class="card_inner">
+                    <p>Cashback</p>
+                    <b>30%-dək</b>
+                    </div>
+                </div>
+                <ul>
+                <li>
+                <a href="/az/individuals/cards/yelo-kart-debet/#order_form" class="button"><span>
+                  Sifariş et
+                </span></a>
+                </li>
+                <li id="more_info">
+                <a href="/az/individuals/cards/yelo-kart-debet/" class="button2">Daha ətraflı <img src="../static/images/bl_arr_bttn.svg" ></a>
+                </li>
+                </ul>
+               </div>
+               <div class="card_img">
+                
+                <div class="card_atv atvImg">   
+                      <div class="image" style="background-image: url(../static/images/visa-platinum.svg);"></div>
+                </div>
+               </div> 
+      </div> 
+      <div class="common_item yelo_bg" >
+        <div class="inner_text">
+         <div class="card_name">Yelo Kredit kartı</div>
+          <div class="card_paragraph">Yelo Kredit kartı - rahat xərcləmək üçün</div>
+            <div class="card_column">
+              <div class="card_inner">
+              <p>Məbləğ</p>
+              <b>300 - 10 000 AZN</b>
+              </div>
+               <div class="card_inner">
+               <p>Güzəşt müddəti</p>
+               <b>45 günədək</b>
+               </div>
+                <div class="card_inner">
+                <p>Cashback</p>
+                <b>30%-dək</b>
+                </div>
+            </div>
+            <ul>
+            <li>
+            <a href="/az/individuals/cards/yelo-kart-debet/#order_form" class="button"><span>
+              Sifariş et
+            </span></a>
+            </li>
+            <li id="more_info">
+            <a href="/az/individuals/cards/yelo-kart-debet/" class="button2">Daha ətraflı <img src="../static/images/bl_arr_bttn.svg" > </a>
+            </li>
+            </ul>
+           </div>
+           <div class="card_img">
+                
+            <div class="card_atv atvImg">   
+                  <div class="image"></div>
+            </div>
+           </div> </div>
+                     
+
+  </div> 
+  <section class="stories">
+    <div class="main-container">
+        <h2 class="section-title">
+            Storilər<span>3</span>
+        </h2>
+        <!-- flex -->
+        <div class="d-flex justify-content-between">
+            <div class="stories-item d-flex justify-content-between align-items-start">
+                <div class="stories-item__info">
+                    <p class="stories-item__title">
+                        Kredit
+                    </p>
+                    <p class="stories-item__subtitle">
+                        Xərclərini təxirə salma, hər zaman dəstək üçün Yelo Bank var
+                    </p>
+                </div>
+                <div class="stories-item__img">
+                    <img src="{{ url_for('static', filename='images/stories-kredit.png') }}" alt="stories-kredit">
+                </div>
+            </div>
+            <div class="stories-item d-flex justify-content-between align-items-start">
+                <div class="stories-item__info">
+                    <p class="stories-item__title">
+                        Cashback
+                    </p>
+                    <p class="stories-item__subtitle">
+                        600-dən çox partnyoru özündə birləşdirən Cashback proqramı
+                    </p>
+                </div>
+                <div class="stories-item__img">
+                    <img src="{{ url_for('static', filename='images/stories-cashback.png') }}" alt="stories-cashback">
+                </div>
+            </div>
+            <div class="stories-item d-flex justify-content-between align-items-start">
+                <div class="stories-item__info">
+                    <p class="stories-item__title">
+                        Yelo kart
+                    </p>
+                    <p class="stories-item__subtitle">
+                        Yelo Kart hər əməliyyatda rahatlıq anlayışını dəyişəcək
+                    </p>
+                </div>
+                <div class="stories-item__img">
+                    <img src="{{ url_for('static', filename='images/stories-yelo-kart.png') }}" alt="stories-yelo-kart">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+</div>
+{% endblock %}
+<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>  
+ -->
+
+
